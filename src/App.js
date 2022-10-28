@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Routes, Route } from "react-router-dom";
+import ModeSelectionPage from "./Pages/ModeSelectionPage";
+import ClassicGamePage from "./Pages/ClassicGamePage";
+import AdvancedGamePage from "./Pages/AdvancedGamePage";
+import NotFoundPage from "./Pages/NotFoundPage";
+import { useSelector } from "react-redux";
 function App() {
+  const gameMode = useSelector((state) => state.game.gameMode);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<ModeSelectionPage />}></Route>
+      {gameMode !== "" && (
+        <>
+          <Route path="/classic" element={<ClassicGamePage />}></Route>
+          <Route path="/advanced" element={<AdvancedGamePage />}></Route>
+        </>
+      )}
+      <Route path="*" element={<NotFoundPage />} />
+    </Routes>
   );
 }
 
