@@ -9,7 +9,6 @@ function ModeSelectionPage() {
       <WelcomeBox />
       <ModeOptions />
       <RulesButton />
-      <Modal />
     </div>
   );
 }

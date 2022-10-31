@@ -1,0 +1,53 @@
+.gameBox {
+  position: relative;
+
+  width: 30vw;
+  height: 23vw;
+  background-image: url("/public/bg-pentagon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+@media screen and (max-width: 900px) {
+  .gameBox {
+    width: 35vw;
+    height: 25vw;
+  }
+}
+
+.firstCharacter,
+.secondCharacter,
+.thirdCharacter,
+.fourthCharacter,
+.fifthCharacter {
+  width: 8vw;
+  height: 8vw;
+  font-size: 4vw;
+  border-width: 1.5vw;
+}
+.firstCharacter {
+  position: absolute;
+  top: -25%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.secondCharacter {
+  position: absolute;
+
+  right: -5%;
+
+  top: 12%;
+}
+.thirdCharacter {
+  bottom: -20%;
+  right: 10%;
+}
+.fourthCharacter {
+  bottom: -20%;
+  left: 10%;
+}
+.fifthCharacter {
+  top: 12%;
+  left: -5%;
+}

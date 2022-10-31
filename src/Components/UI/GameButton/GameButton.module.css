@@ -1,0 +1,62 @@
+.GameButtonContainer {
+  border: 2vw solid transparent;
+  border-radius: 50%;
+  width: 12vw;
+  height: 12vw;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: hsl(217, 16%, 45%);
+  position: absolute;
+  font-size: 7vw;
+}
+.GameButtonContainer[type="rock"] {
+  border-color: hsl(349, 73%, 51%);
+}
+.GameButtonContainer[type="paper"] {
+  border-color: hsl(230, 85%, 55%);
+}
+.GameButtonContainer[type="scissors"] {
+  border-color: hsl(39, 89%, 49%);
+}
+.GameButtonContainer[type="spock"] {
+  border-color: hsl(189, 59%, 53%);
+}
+.GameButtonContainer[type="lizard"] {
+  border-color: hsl(261, 69%, 54%);
+}
+.GameButtonContainer[clickable="clickable"]:active {
+  box-shadow: inset 3px 5px 10px 10px rgba(0, 0, 0, 0.3);
+}
+.characterIcon {
+}
+.iconDiv {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  justify-content: Center;
+}
+.GameButtonContainer[highlight="true"] {
+  animation-name: shine;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes shine {
+  0% {
+    box-shadow: none;
+  }
+  25% {
+    box-shadow: 0px 0px 550px 100px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: none;
+  }
+  75% {
+    box-shadow: 0px 0px 550px 100px rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    box-shadow: none;
+  }
+}

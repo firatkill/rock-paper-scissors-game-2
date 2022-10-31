@@ -1,0 +1,32 @@
+.gameBox {
+  position: relative;
+
+  width: 30vw;
+  height: 23vw;
+  background-image: url("/public/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+@media screen and (max-width: 900px) {
+  .gameBox {
+    width: 35vw;
+    height: 25vw;
+  }
+}
+.firstCharacter {
+  position: absolute;
+  top: -25%;
+  left: -15%;
+}
+.secondCharacter {
+  position: absolute;
+  top: -25%;
+  right: -15%;
+}
+.thirdCharacter {
+  bottom: -25%;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
